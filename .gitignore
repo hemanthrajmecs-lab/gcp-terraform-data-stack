@@ -1,0 +1,14 @@
+# Terraform internals
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Keep secrets out of git. The tfvars under environments/ are
+# committed on purpose, they only hold project ids and sizing.
+*.tfvars
+!environments/*/terraform.tfvars
+
+# Plans
+*.tfplan
